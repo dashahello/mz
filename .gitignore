@@ -4,5 +4,8 @@ node_modules/
 # Ignore the test directory
 /test
 
+
+
 # The file containing environment variables 
 .env
+data.json
