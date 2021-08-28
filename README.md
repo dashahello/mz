@@ -13,4 +13,5 @@ mz is a Node.js server which is able to perform CRUD operations
 
 - PORT (port, on which the server will run)
 
-5. Run `npm start`
+5. Create `data.json` file which will hold all the data
+6. Run `npm start`
