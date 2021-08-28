@@ -13,5 +13,33 @@ mz is a Node.js server which is able to perform CRUD operations
 
 - PORT (port, on which the server will run)
 
-5. Create `data.json` file in the app directory (this file will hold all the data)
+5. Create `data.json` file in the app directory with an empty array in there
 6. Run `npm start`
+
+### Request (example)
+
+`POST /animals`
+
+```
+{
+    "species": "Dog",
+    "name": "Rex",
+    "age": 2,
+    "health": "No issues"
+}
+
+```
+
+### Response (example)
+
+```
+[
+    {
+        "id": "c2c31403-2892-45f0-9eed-6cbe0d8b58b7",
+        "species": "Dog",
+        "name": "Rex",
+        "age": 2,
+        "health": "No issues"
+    }
+]
+```
