@@ -16,14 +16,14 @@ const server = http.createServer((req, res) => {
 
   const pathname = reqUrl.pathname;
 
-  const matches = pathname.match(/\/animal\/([\w-]+)\/?/);
+  const matches = pathname.match(/\/animals\/([\w-]+)\/?/);
   const animalId = matches ? matches[1] : null;
 
   const routeNotFound = () =>
     res.end(JSON.stringify({ message: 'Route not found!' }));
 
   if (method === 'GET') {
-    if (pathname === '/animal') {
+    if (pathname === '/animals') {
       getAllAnimals(req, res);
     } else if (animalId) {
       getSingleAnimal(req, res, animalId);
@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
       routeNotFound();
     }
   } else if (method === 'POST') {
-    if (pathname === '/animal') {
+    if (pathname === '/animals') {
       createNewAnimal(req, res);
     } else {
       routeNotFound();
